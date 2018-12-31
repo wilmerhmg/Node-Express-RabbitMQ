@@ -1,0 +1,42 @@
+{
+  "name": "express-rabbitmq",
+  "version": "1.0.0",
+  "description": "Basic example RabbitMQ",
+  "main": "app.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel ./ --out-dir ./dist --ignore ./dist --ignore ./node_modules",
+    "babel-node": "babel-node app.js",
+    "dev": "nodemon --exec npm run babel-node",
+    "start": "bash Docker.Run.RabbitMQ.sh && sleep 10 && babel-node app.js",
+    "worker": "babel-node workers/OnlyWorker.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Wito/Node-Express-RabbitMQ.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "RabbitMQ"
+  ],
+  "author": "Wilmer H. Muñoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dev-Wito/Node-Express-RabbitMQ/issues"
+  },
+  "homepage": "https://github.com/Dev-Wito/Node-Express-RabbitMQ.git#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "@babel/node": "^7.0.0",
+    "amqp": "^0.2.7",
+    "consign": "^0.1.6",
+    "express": "^4.16.3",
+    "sequelize": "^4.38.0",
+    "sqlite3": "^4.0.4"
+  }
+}
