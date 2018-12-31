@@ -1,8 +1,11 @@
 # Node-Express-RabbitMQ
 Basic use of RabbitMQ queue manager in NodeJS
 
-
 # Installation
+#### Requirements
+- Docker
+- Node
+- Npm
 
 #### Download and install
 
@@ -30,3 +33,7 @@ A queue manager allows us to alleviate the loads of our servers, in processes th
 In this example you can start an instance of a REST service and many workers that listen to a `Mailerman` queue, in which you could do any task you want and raise as many workers as you wish to lighten the server load.
 
 Import `Postman Collection.json` to your postman so you can test the exercise in detail
+
+# Rabbit MQ Interface
+http://127.0.0.1:15672/
+User `admin` and password `El Profesor Super O`
